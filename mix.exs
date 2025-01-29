@@ -5,8 +5,8 @@ defmodule WebSockex.Mixfile do
     [
       app: :websockex,
       name: "WebSockex",
-      version: "0.4.3",
-      elixir: "~> 1.7",
+      version: "0.4.4",
+      elixir: "~> 1.12",
       description: "An Elixir WebSocket client",
       source_url: "https://github.com/Azolo/websockex",
       build_embedded: Mix.env() == :prod,
@@ -18,8 +18,8 @@ defmodule WebSockex.Mixfile do
     ]
   end
 
-  defp elixirc_paths(:test), do: ['lib', 'test/support']
-  defp elixirc_paths(_), do: ['lib']
+  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(_), do: ["lib"]
 
   def application do
     applications = [:logger, :ssl, :crypto] ++ applications(otp_release())
@@ -50,7 +50,7 @@ defmodule WebSockex.Mixfile do
   defp package do
     %{
       licenses: ["MIT"],
-      maintainers: ["Justin Baker"],
+      maintainers: ["Justin Baker", "Antriksh Chaudhary", "STX Group"],
       links: %{"GitHub" => "https://github.com/Azolo/websockex"}
     }
   end
